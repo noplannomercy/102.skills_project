@@ -1,0 +1,4 @@
+Hi there, I want you to embed this N8n chatbot into our website. Here's the documentation on doing so.
+https://www.npmjs.com/package/@n8n/chat
+Also, here is the webhook URL to our n8n chatbot.
+https://n8n.srv1026488.hstgr.cloud/webhook/d7261880-e38a-4e65-b62d-721266b74d5c/chat

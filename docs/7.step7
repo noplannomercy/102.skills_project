@@ -1,0 +1,3 @@
+Hey there! We want to implement a reservation button. At the moment, it brings up a modal, but the modal doesn't do anything. What we need to do is call the following n8n webhook endpoint. This webhook expects a name, the party size, and the date and time as a date time field.
+https://n8n.srv1026488.hstgr.cloud/webhook/make-reservation
+You should not call this directive from the front end. This webhook might have authentication on it, so we need to securely call this from the back end. I suggest creating an API in Next.js or a server action or a route handler.
