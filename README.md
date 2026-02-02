@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Oak & Barrel Restaurant Website
+
+A modern, responsive restaurant website built with Next.js 16, React 19, TypeScript, and Tailwind CSS 4.
+
+## Features
+
+- **3-Page Restaurant Website**
+  - Home page with hero, popular items, and events
+  - Interactive menu with unique page-flip/book design
+  - About page with founder story and restaurant features
+
+- **Reservation System**
+  - Modal-based table reservation form
+  - Date and time selection
+  - Party size options (1-12 guests)
+
+- **Live Music Events**
+  - Friday Night Jazz (7:00 PM)
+  - Sunday Afternoon Acoustic (3:00 PM)
+
+- **Menu Categories**
+  - Appetizers
+  - Sushi & Sashimi
+  - Prime Steaks
+  - Burgers & Grills
+  - Craft Beverages
+
+## Tech Stack
+
+- **Framework**: Next.js 16.1.6 (App Router)
+- **React**: 19.2.3
+- **TypeScript**: 5
+- **Styling**: Tailwind CSS 4
+- **Design System**: Custom restaurant-themed components (adapted from Vegerly)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+### Build for Production
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with navigation and footer
+│   ├── page.tsx            # Home page
+│   ├── menu/
+│   │   └── page.tsx        # Menu page
+│   └── about/
+│       └── page.tsx        # About page
+├── components/
+│   ├── Navigation.tsx      # Site navigation
+│   ├── Footer.tsx          # Site footer
+│   ├── ReservationModal.tsx # Reservation form modal
+│   ├── Button.tsx          # Reusable button component
+│   ├── Card.tsx            # Card components
+│   ├── Input.tsx           # Form input components
+│   ├── Modal.tsx           # Modal component
+│   ├── Badge.tsx           # Badge component
+│   ├── home/               # Home page sections
+│   ├── menu/               # Menu page components
+│   └── about/              # About page sections
+├── contexts/
+│   └── ReservationContext.tsx # Reservation state management
+├── data/
+│   ├── menu.ts             # Menu items data
+│   └── images.ts           # Pexels image URLs
+└── utils/
+    └── menuData.ts         # Menu data utilities
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design System
 
-## Learn More
+The website uses a warm, restaurant-appropriate color palette:
 
-To learn more about Next.js, take a look at the following resources:
+- **Primary**: Oak brown (#8B4513, #A0522D)
+- **Accent**: Copper/brass (#B87333, #CD7F32)
+- **Background**: Warm cream (#FFF8F0)
+- **Text**: Deep brown (#2C1810)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Menu Data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Menu items are stored in `src/data/menu.ts` and parsed from the CSV file in `docs/menu-items.csv`. Each item includes:
+- Category
+- Name
+- Description
+- Price
+- Optional badge (Chef's Pick, Premium, Popular)
+- High-quality Pexels stock image
 
-## Deploy on Vercel
+## Images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All images are sourced from Pexels and optimized for web use. Image URLs are centralized in `src/data/images.ts` for easy management.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Features Implemented
+
+✅ Responsive design (mobile, tablet, desktop)
+✅ Sticky navigation with mobile menu
+✅ Reservation modal with form validation
+✅ Unique menu book with page-flip navigation
+✅ Live music event showcase
+✅ Founder story and restaurant values
+✅ Product cards with badges
+✅ Smooth animations and transitions
+✅ SEO-friendly metadata
+✅ Accessible components
+
+## Future Enhancements
+
+- Shopping cart for takeout orders
+- Real-time table availability checking
+- Email confirmation for reservations
+- Customer reviews section
+- Newsletter signup
+- Social media integration
+- Interactive menu filtering
+- Photo gallery
+
+## Credits
+
+- **Founder**: Leon van Zyl (fictional)
+- **Images**: Pexels (royalty-free stock photos)
+- **Design Inspiration**: Vegerly design system
+- **Built by**: Claude Code
+
+## License
+
+This is a demonstration project. All rights reserved.

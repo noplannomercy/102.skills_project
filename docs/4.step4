@@ -1,0 +1,1 @@
+Hey, please can you use your optimize-images skill to download all of the stock images used in this application? I think a lot of them are actually being retrieved from Pexels, then resize them and convert them to WebP. They need to be stored in the public folder. Then you need to update all of the references to these images to use these local versions of the images instead.
